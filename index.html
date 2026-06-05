@@ -3,118 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentación Detallada: Tung Tung Sahur</title>
+    <title>Obesidad: Comprendiendo la Epidemia Global</title>
     <style>
-        /* Estilos Globales - Tema Negro Moderno */
+        /* Estilos Globales - Tema Negro Premium */
         :root {
-            --bg-color: #121212; /* Fondo casi negro */
-            --bg-accent: #1e1e1e; /* Fondo ligeramente más claro para tarjetas */
-            --text-primary: #e0e0e0; /* Texto gris claro/blanco */
-            --text-secondary: #b0b0b0; /* Texto gris más suave */
-            --accent-color: #ffd700; /* Color de acento dorado (puedes cambiarlo a azul #007bff o verde #28a745) */
-            --border-color: #333;
+            --bg-color: #0a0a0a; /* Negro profundo */
+            --bg-accent: #161616; /* Carbón para tarjetas y bloques */
+            --text-primary: #f5f5f7; /* Blanco suave */
+            --text-secondary: #a1a1a6; /* Gris refinado */
+            --accent-color: #ff4d4d; /* Rojo/Coral de alerta médica y acento */
+            --border-color: #2c2c2e;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-primary);
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
         h1, h2, h3 {
-            color: #ffffff;
             font-weight: 700;
+            letter-spacing: -0.02em;
             margin-top: 0;
         }
 
-        h1 { font-size: 3rem; margin-bottom: 10px; }
-        h2 { font-size: 2.2rem; border-bottom: 2px solid var(--accent-color); display: inline-block; padding-bottom: 10px; margin-bottom: 30px; }
-        h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--accent-color); }
+        h1 { 
+            font-size: 3.5rem; 
+            line-height: 1.1; 
+            margin-bottom: 20px;
+            background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        h2 { 
+            font-size: 2.2rem; 
+            border-left: 4px solid var(--accent-color); 
+            padding-left: 15px; 
+            margin-bottom: 30px; 
+        }
+        
+        h3 { 
+            font-size: 1.4rem; 
+            margin-bottom: 15px; 
+            color: var(--accent-color); 
+        }
 
         p {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-size: 1.1rem;
             color: var(--text-secondary);
         }
 
-        /* Contenedor principal */
         .container {
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* Sección Hero (Encabezado con foto de fondo) */
+        /* Sección Hero */
         #hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+            background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), 
                         url('https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/20260521_095542.jpg') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #fff;
         }
 
         #hero-content {
-            z-index: 1;
+            max-width: 800px;
         }
 
-        /* Estilos generales para secciones */
+        .badge {
+            display: inline-block;
+            background-color: rgba(255, 77, 77, 0.15);
+            color: var(--accent-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 77, 77, 0.3);
+        }
+
+        /* Secciones de Contenido */
         section {
-            padding: 80px 0;
+            padding: 100px 0;
             border-bottom: 1px solid var(--border-color);
         }
 
-        /* Layouts de cuadrícula y flexibilidad */
         .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 60px;
             align-items: center;
         }
 
-        .flex-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        /* Estilos para las imágenes de contenido */
-        .content-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+        /* Tarjetas de Información */
+        .info-card {
+            background-color: var(--bg-accent);
+            padding: 40px;
+            border-radius: 16px;
             border: 1px solid var(--border-color);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Imágenes */
+        .image-wrapper {
+            position: relative;
+        }
+
+        .content-image {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+            border: 1px solid var(--border-color);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .content-image:hover {
-            transform: scale(1.02);
+            transform: translateY(-5px);
         }
 
-        /* Tarjetas de información */
-        .info-card {
-            background-color: var(--bg-accent);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+        /* Lista de Viñetas Estilizada */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
         }
 
-        /* Sección de galería específica */
-        #gallery {
-            background-color: var(--bg-accent);
+        .styled-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .styled-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 5px;
+            top: -4px;
         }
 
         /* Footer */
         footer {
-            background-color: #000;
-            padding: 40px 0;
+            background-color: #020202;
+            padding: 50px 0;
             text-align: center;
             border-top: 1px solid var(--border-color);
         }
@@ -124,81 +169,92 @@
             margin: 5px 0;
         }
 
-        /* Adaptabilidad para móviles */
+        /* Responsivo */
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
+            h1 { font-size: 2.5rem; }
             h2 { font-size: 1.8rem; }
-            section { padding: 50px 0; }
-            #hero { height: 70vh; }
+            section { padding: 60px 0; }
+            .grid-2 { grid-template-columns: 1fr; gap: 40px; }
+            #hero { height: auto; padding: 120px 0; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Sección 1: Portada (Hero) -->
+    <!-- Sección 1: Portada Principal -->
     <header id="hero">
         <div id="hero-content" class="container">
-            <h1>Presentación: Tung Tung Sahur</h1>
-            <p>Una mirada detallada a nuestra iniciativa comunitaria para el mes de Ramadán.</p>
+            <span class="badge">Salud Pública Mundial</span>
+            <h1>Obesidad: La Epidemia Silenciosa del Siglo XXI</h1>
+            <p>Un análisis clínico integral sobre las causas multifactoriales, el impacto en los sistemas biológicos y las estrategias modernas para su prevención y tratamiento definitivo.</p>
         </div>
     </header>
 
-    <!-- Sección 2: Introducción y Misión -->
-    <section id="introduccion">
+    <!-- Sección 2: Definición y Análisis Multifactorial -->
+    <section id="definicion">
         <div class="container grid-2">
             <div>
-                <h2>¿Qué es Tung Tung Sahur?</h2>
-                <p>Tung Tung Sahur es una tradición comunitaria arraigada, dedicada a despertar a los vecinos para el Sahur (la comida antes del amanecer) durante el mes sagrado de Ramadán. Nuestra iniciativa busca mantener viva esta costumbre de una manera organizada, respetuosa y vibrante.</p>
-                <p>En esta sección, puedes detallar la historia de tu grupo específico, por qué decidieron organizarse y qué impacto esperan tener en la comunidad local. Describe el espíritu de colaboración y servicio que define a Tung Tung Sahur.</p>
+                <span class="badge">Diagnóstico Clínico</span>
+                <h2>¿Qué es la Obesidad?</h2>
+                <p>La obesidad es una enfermedad crónica, compleja y multifactorial caracterizada por una acumulación excesiva de tejido adiposo que perjudica la salud general. Más allá de ser un desequilibrio simple entre calorías consumidas y gastadas, la ciencia médica la reconoce hoy como un trastorno neuroendocrino y metabólico subyacente.</p>
+                <p>El diagnóstico se apoya tradicionalmente en el Índice de Masa Corporal (IMC), considerando obesidad a partir de un valor igual o superior a 30 kg/m². Sin embargo, la distribución de la grasa corporal (especialmente la grasa visceral) es el indicador crítico de los riesgos cardiovasculares y metabólicos.</p>
             </div>
-            <div>
-                <!-- Usando la imagen del diagrama organizativo -->
-                <img src="https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/d672b0f7-3ae2-4ddb-aa3a-326199861d7f.png" alt="Diagrama Organizativo de Tung Tung Sahur" class="content-image">
+            <div class="image-wrapper">
+                <!-- Imagen del esquema organizativo reutilizada para representar el mapeo metabólico/factores -->
+                <img src="https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/d672b0f7-3ae2-4ddb-aa3a-326199861d7f.png" alt="Esquema de factores correlacionados" class="content-image">
             </div>
         </div>
     </section>
 
-    <!-- Sección 3: Actividades y Destacados (Galería) -->
-    <section id="gallery">
-        <div class="container flex-center">
-            <h2>Puntos Destacados y Actividades</h2>
-            <p>Nuestra labor va más allá de solo hacer ruido. Organizamos rutas, eventos especiales y participamos en la vida comunitaria.</p>
-            
-            <div class="grid-2" style="margin-top: 40px;">
-                <div>
-                    <!-- Usando la foto del evento en grupo -->
-                    <img src="https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/7904884d-2bae-41b9-8beb-6dbd6240f165.png" alt="Evento grupal Tung Tung Sahur" class="content-image">
-                </div>
-                <div class="info-card">
-                    <h3>Nuestros Eventos Estrella</h3>
-                    <p>Aquí puedes describir detalladamente un evento específico capturado en la foto. Por ejemplo: "Nuestra participación en el Festival Anual de Sahur 2024", o "La noche de apertura de Ramadán donde recorrimos las calles principales".</p>
-                    <p>Menciona la preparación, la energía del grupo y la respuesta de los vecinos. Este es el espacio para resaltar los logros y los momentos memorables de la iniciativa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección 4: Nuestro Equipo -->
-    <section id="equipo">
+    <!-- Sección 3: Causas y Comorbilidades -->
+    <section id="causas" style="background-color: var(--bg-accent);">
         <div class="container grid-2">
+            <div class="image-wrapper">
+                <!-- Imagen del evento comunitario adaptada al contexto de estudios sociodemográficos de salud -->
+                <img src="https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/7904884d-2bae-41b9-8beb-6dbd6240f165.png" alt="Análisis de población y entorno social" class="content-image">
+            </div>
             <div class="info-card">
-                <h2>Conoce a Nuestro Equipo</h2>
-                <p>Detrás de cada noche de Tung Tung Sahur hay un grupo dedicado de individuos. Esta sección está dedicada a presentar a los líderes, coordinadores y voluntarios clave que hacen posible esta iniciativa.</p>
-                <p>Describe la estructura del equipo (puedes referenciar el diagrama de la Sección 2). Habla sobre la dedicación, el tiempo invertido por los voluntarios y cómo se coordinan para asegurar que todas las rutas se cubran de manera eficiente y respetuosa.</p>
-            </div>
-            <div>
-                <!-- Usando la foto grupal en interior -->
-                <img src="https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/IMG-20250828-WA0004.jpg" alt="Equipo de Tung Tung Sahur" class="content-image">
+                <span class="badge">Factores de Riesgo</span>
+                <h3>La Red de Factores Interconectados</h3>
+                <p>El desarrollo de la obesidad es el resultado de una compleja interacción de variables biológicas y socioambientales:</p>
+                <ul class="styled-list">
+                    <li><strong>Genética y Epigenética:</strong> Predisposición en la regulación del apetito y la eficiencia del almacenamiento lipídico.</li>
+                    <li><strong>Entorno Obesogénico:</strong> Disponibilidad masiva de alimentos ultraprocesados de alta densidad calórica y bajo costo.</li>
+                    <li><strong>Sedentarismo Tecnológico:</strong> Reducción drástica del gasto energético en las actividades laborales y recreativas modernas.</li>
+                    <li><strong>Disrupción Endocrina:</strong> Estrés crónico, alteraciones del cortisol y falta de sueño reparador.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Footer: Contacto y Cierre -->
+    <!-- Sección 4: Consecuencias y Prevención Médica -->
+    <section id="consecuencias">
+        <div class="container grid-2">
+            <div>
+                <span class="badge">Consecuencias Clínicas</span>
+                <h2>Impacto Sistémico de la Enfermedad</h2>
+                <p>La obesidad actúa como el principal catalizador de múltiples patologías graves no transmisibles. El estado inflamatorio crónico de bajo grado provocado por el tejido adiposo disfuncional desencadena:</p>
+                <ul class="styled-list">
+                    <li>Diabetes Tipo 2 y resistencia severa a la insulina.</li>
+                    <li>Enfermedades cardiovasculares (hipertensión, infartos, aterosclerosis).</li>
+                    <li>Esteatosis hepática no alcohólica (hígado graso).</li>
+                    <li>Trastornos mecánicos como apnea obstructiva del sueño y osteoartritis grave.</li>
+                </ul>
+                <p>El abordaje moderno exige estrategias transdisciplinarias: planes nutricionales personalizados basados en alimentos densos en nutrientes, fomento de la actividad física adaptada, terapia cognitivo-conductual y, en casos estrictos, soporte farmacológico o cirugía bariátrica.</p>
+            </div>
+            <div class="image-wrapper">
+                <!-- Imagen del equipo médico/reunión adaptada a comités de salud pública e investigación -->
+                <img src="https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/IMG-20250828-WA0004.jpg" alt="Comité médico multidisciplinario" class="content-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Información Institucional -->
     <footer>
         <div class="container">
-            <p><strong>Presentación Detallada de Tung Tung Sahur</strong></p>
-            <p>&copy; 2024 Iniciativa Comunitaria Tung Tung Sahur. Todos los derechos reservados.</p>
-            <p style="margin-top: 15px;">Contacto: info@tungtungsahur.com | Síguenos: @tungtungsahur_oficial</p>
+            <p style="color: var(--text-primary); font-weight: 600;">Plataforma de Divulgación Científica sobre la Obesidad</p>
+            <p>&copy; 2026 Simposio Global de Salud Pública. Todos los derechos reservados.</p>
+            <p style="color: rgba(255, 77, 77, 0.7); font-size: 0.8rem; margin-top: 15px;">Documento técnico enfocado en la concientización y prevención epidemiológica.</p>
         </div>
     </footer>
 
