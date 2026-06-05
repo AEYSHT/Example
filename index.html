@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Detallada: Tung Tung Sahur</title>
+    <style>
+        /* Estilos Globales - Tema Negro Moderno */
+        :root {
+            --bg-color: #121212; /* Fondo casi negro */
+            --bg-accent: #1e1e1e; /* Fondo ligeramente más claro para tarjetas */
+            --text-primary: #e0e0e0; /* Texto gris claro/blanco */
+            --text-secondary: #b0b0b0; /* Texto gris más suave */
+            --accent-color: #ffd700; /* Color de acento dorado (puedes cambiarlo a azul #007bff o verde #28a745) */
+            --border-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-top: 0;
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; }
+        h2 { font-size: 2.2rem; border-bottom: 2px solid var(--accent-color); display: inline-block; padding-bottom: 10px; margin-bottom: 30px; }
+        h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--accent-color); }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Sección Hero (Encabezado con foto de fondo) */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                        url('https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/20260521_095542.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        #hero-content {
+            z-index: 1;
+        }
+
+        /* Estilos generales para secciones */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Layouts de cuadrícula y flexibilidad */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* Estilos para las imágenes de contenido */
+        .content-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .content-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Tarjetas de información */
+        .info-card {
+            background-color: var(--bg-accent);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Sección de galería específica */
+        #gallery {
+            background-color: var(--bg-accent);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+
+        /* Adaptabilidad para móviles */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            section { padding: 50px 0; }
+            #hero { height: 70vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sección 1: Portada (Hero) -->
+    <header id="hero">
+        <div id="hero-content" class="container">
+            <h1>Presentación: Tung Tung Sahur</h1>
+            <p>Una mirada detallada a nuestra iniciativa comunitaria para el mes de Ramadán.</p>
+        </div>
+    </header>
+
+    <!-- Sección 2: Introducción y Misión -->
+    <section id="introduccion">
+        <div class="container grid-2">
+            <div>
+                <h2>¿Qué es Tung Tung Sahur?</h2>
+                <p>Tung Tung Sahur es una tradición comunitaria arraigada, dedicada a despertar a los vecinos para el Sahur (la comida antes del amanecer) durante el mes sagrado de Ramadán. Nuestra iniciativa busca mantener viva esta costumbre de una manera organizada, respetuosa y vibrante.</p>
+                <p>En esta sección, puedes detallar la historia de tu grupo específico, por qué decidieron organizarse y qué impacto esperan tener en la comunidad local. Describe el espíritu de colaboración y servicio que define a Tung Tung Sahur.</p>
+            </div>
+            <div>
+                <!-- Usando la imagen del diagrama organizativo -->
+                <img src="https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/d672b0f7-3ae2-4ddb-aa3a-326199861d7f.png" alt="Diagrama Organizativo de Tung Tung Sahur" class="content-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Actividades y Destacados (Galería) -->
+    <section id="gallery">
+        <div class="container flex-center">
+            <h2>Puntos Destacados y Actividades</h2>
+            <p>Nuestra labor va más allá de solo hacer ruido. Organizamos rutas, eventos especiales y participamos en la vida comunitaria.</p>
+            
+            <div class="grid-2" style="margin-top: 40px;">
+                <div>
+                    <!-- Usando la foto del evento en grupo -->
+                    <img src="https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/7904884d-2bae-41b9-8beb-6dbd6240f165.png" alt="Evento grupal Tung Tung Sahur" class="content-image">
+                </div>
+                <div class="info-card">
+                    <h3>Nuestros Eventos Estrella</h3>
+                    <p>Aquí puedes describir detalladamente un evento específico capturado en la foto. Por ejemplo: "Nuestra participación en el Festival Anual de Sahur 2024", o "La noche de apertura de Ramadán donde recorrimos las calles principales".</p>
+                    <p>Menciona la preparación, la energía del grupo y la respuesta de los vecinos. Este es el espacio para resaltar los logros y los momentos memorables de la iniciativa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Nuestro Equipo -->
+    <section id="equipo">
+        <div class="container grid-2">
+            <div class="info-card">
+                <h2>Conoce a Nuestro Equipo</h2>
+                <p>Detrás de cada noche de Tung Tung Sahur hay un grupo dedicado de individuos. Esta sección está dedicada a presentar a los líderes, coordinadores y voluntarios clave que hacen posible esta iniciativa.</p>
+                <p>Describe la estructura del equipo (puedes referenciar el diagrama de la Sección 2). Habla sobre la dedicación, el tiempo invertido por los voluntarios y cómo se coordinan para asegurar que todas las rutas se cubran de manera eficiente y respetuosa.</p>
+            </div>
+            <div>
+                <!-- Usando la foto grupal en interior -->
+                <img src="https://raw.githubusercontent.com/AEYSHT/Djjdkdp/refs/heads/main/IMG-20250828-WA0004.jpg" alt="Equipo de Tung Tung Sahur" class="content-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Contacto y Cierre -->
+    <footer>
+        <div class="container">
+            <p><strong>Presentación Detallada de Tung Tung Sahur</strong></p>
+            <p>&copy; 2024 Iniciativa Comunitaria Tung Tung Sahur. Todos los derechos reservados.</p>
+            <p style="margin-top: 15px;">Contacto: info@tungtungsahur.com | Síguenos: @tungtungsahur_oficial</p>
+        </div>
+    </footer>
+
+</body>
+</html>
